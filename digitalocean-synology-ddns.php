@@ -120,8 +120,6 @@ $putData = '{"data":"' . $ip . '"}';
 $url = "https://api.digitalocean.com/v2/domains/".$domain."/records/".$id;
 $reg = curl_init();
 
-print_r($putData);
-
 curl_setopt($reg, CURLOPT_URL, $url);
 curl_setopt($reg, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization )); // Inject the token into the header
 curl_setopt($reg, CURLOPT_RETURNTRANSFER, true);
